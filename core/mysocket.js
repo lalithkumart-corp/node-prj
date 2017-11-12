@@ -7,4 +7,9 @@ exports.socketConnection = function(socket){
             socket.emit('results-fetched', myResult);
         });            
     });
+    socket.on('do-calculation', function(data){
+        console.log(data);
+        var result = parseInt(data.arg1) + parseInt(data.arg2);
+        socket.emit('calculation-done', {status: 'success', result: result});
+    });
 };

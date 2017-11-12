@@ -13,6 +13,25 @@
     </head>
     <body>
         <input class='fetch-and-render' type='button' value='Fetch & Render'/>  
-        <div class='result-container'></div> 
+        <div class='result-container'></div>
+        <p>---<b>Socket</b> communication system---</p>
+        <input type='text' class='an-arg1' />
+        <input type='text' class='an-arg2' />
+        <input type='button' class='submit-btn' value='Submit'/>
+        <span class='myresult'></span>
+
+        <p>---Restfull API: <b>FORM</b> + <b>POST</b>---</p>
+        <form action='docalculation' method='post'>
+            <input type='number' class='a-num1' name='firstNumber'/>
+            <input type='number' class='a-num2' name='secondNumber'/>
+            <input type="submit" value='submit'/> 
+        </form>
+
+        <p>---Restfull API:<b>GET</b> ---</p>
+        <input type='button' class='get-user-name' value='Get User Name'/><span class='res-user-name'></span>
+
+        <p>---Restfull API:<b>POST</b> ---</p>
+        <input type='button' class='get-user-name-post' value='Get User Name'/><span class='res-user-name-post'></span>
+
     </body>
 </html>

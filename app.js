@@ -27,11 +27,30 @@ app.get('/', function(request,response){
 });
 
 app.all('/docalculation', function(req, res){
-    console.log(req);
-    var a = 1 + 1;
+    var params = req.body;
+    var resultVal = params.firstNumber + params.secondNumber;
+    res.setHeader('Content-Type', 'application/json');
+    res.send({status: 'success', result: resultVal });
 });
 
-// io.sockets.on("connection",function(socket){
+app.get('/user', function(req, res){
+    console.log();
+    var params = req.query;
+    if(params.fetch == 'username')
+        returnVal = 'Lalith Kumar';
+    res.send({status: 'success', result: returnVal});
+});
+
+app.post('/user', function(req, res){
+    console.log();
+    var params = req.body;
+    if(params.fetch == 'username')
+        returnVal = 'Lalith Kumar';
+
+    res.send({status: 'success', result: returnVal});
+});
+
+// io.sockets.on("connection",function(socket){ 
 //     socket.emit("connect");
 //     socket.on('fetch-results', function(data){
 //         io.sockets.emit('results-fetched');
