@@ -1,0 +1,42 @@
+<html ng-app='app1'>
+    <head>
+        <meta charset="utf-8">
+        <title>Test Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/assets/lib/angular.min.js"></script>
+        <script src="/assets/js/angular-demo.js"></script>  
+    </head>
+    <body>
+        <div data-ng-controller="ctrl1">              
+            <ul ng-repeat='aList in arrList'>
+                {{aList}}
+            </ul>
+
+            <li ng-repeat='aStudent in students'>
+                {{aStudent.name}} , {{aStudent.project}} 
+            </li>
+
+            <table>
+                <tbody>
+                    <tr ng-repeat-start = 'aStudent in students'>
+                        <td>Name: {{aStudent.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Project: {{aStudent.project}}</td>
+                    </tr>
+                    <tr ng-repeat-end>
+                        <td>
+                            Role: {{aStudent.role}}
+                        </td>
+                        <td>
+                            Experience: {{aStudent.experience}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <b ng-show='header'>Hai</b>
+        </div>
+    </body>
+</html>

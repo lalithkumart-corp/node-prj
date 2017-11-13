@@ -26,6 +26,12 @@ app.get('/', function(request,response){
     response.end();
 });
 
+app.get('/angular', function(request,response){
+    response.writeHead(200,{"Content-Type":"text/html"});
+    response.write(fs.readFileSync("./pages/angular-demo.html"));
+    response.end();
+});
+
 app.all('/docalculation', function(req, res){
     var params = req.body;
     var resultVal = params.firstNumber + params.secondNumber;
