@@ -4,8 +4,11 @@
         <title>Test Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type='text/javascript' src='/assets/lib/jquery.min.js'></script>
+        <script type='text/javascript' src='/assets/lib/underscore-min.js'></script>        
         <script src="/assets/lib/angular.min.js"></script>
-        <script src="/assets/js/angular-demo.js"></script>  
+        <script src="/assets/js/app.module.js"></script>
+        <script src="/assets/js/app.directive.js"></script>
     </head>
     <body>
         <div data-ng-controller="ctrl1">              
@@ -44,7 +47,8 @@
             <student-list-directive1></student-list-directive1>
             <div student-list-directive2></div>
             <div class="student-list-directive3"></div>
-            <!-- directive: student-list-directive4 -->
+            <div class="student-list-directive4"></div>
+            <!-- directive: student-list-directive5 -->
         </div>
         <!-- END : Own Directory -->
     </body>
