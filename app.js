@@ -56,6 +56,28 @@ app.post('/user', function(req, res){
     res.send({status: 'success', result: returnVal});
 });
 
+app.get('/downloads', function(request,response){
+    response.writeHead(200,{"Content-Type":"text/html"});
+    response.write(fs.readFileSync("./pages/downloads.html"));
+    response.end();
+});
+
+app.get('/getzipfile', function(request,response){
+    
+    // --------- WAY-1 -----------
+    // const src = fs.createReadStream('files/dummy.zip');
+    // src.pipe(response);
+    
+    // --------- WAY-2 -----------
+    // fs.readFile('files/dummy.zip', function(err, content){
+    //     response.end(content);
+    // });
+
+    // --------- WAY-3 -----------
+    var content = fs.readFileSync('files/dummy.zip', 'utf8');
+    response.end(content);
+});
+
 // io.sockets.on("connection",function(socket){ 
 //     socket.emit("connect");
 //     socket.on('fetch-results', function(data){
