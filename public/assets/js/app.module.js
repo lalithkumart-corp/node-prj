@@ -1,20 +1,16 @@
-var app1 = angular.module('app1', []);
+var app1 = angular.module('app1', ['ui.router', 'tutorialModule']);
 
-app1.controller('ctrl1', function($scope){
-    $scope.header = false;
-    $scope.arrList = ['carbon', 'density'];
-    $scope.students = [
-        {
-            name: 'lalith',
-            project: 'knovel',
-            role: 'Development',
-            experience: '2'
-        },
-        {
-            name: 'kumar',
-            project: 'phoenix',
-            role: 'Manager',
-            experience: '1.5'
-        }
-    ];
-});
+app1.config(['$urlRouterProvider','$stateProvider', function config($urlRouterProvider,$stateProvider) {
+    $urlRouterProvider.otherwise('/tutorial');
+    $stateProvider.state('tutorial',{
+        url:'/tutorial',
+        controller:'tutorialController',
+        templateUrl:'assets/templates/tutorial.html',
+        sticky: true
+    }).state('contactus', {
+        url: '/contactus',
+        templateUrl:'assets/templates/contactus.html',
+        sticky: true
+    })
+}]);
+

@@ -8,61 +8,15 @@
         <script type='text/javascript' src='/assets/lib/underscore-min.js'></script>        
         <script src="/assets/lib/angular.min.js"></script>
         <script src="/assets/js/app.module.js"></script>
-        <script src="/assets/js/app.directive.js"></script>
+        
         <script src="/assets/js/app.factory.js"></script>
+        <script src="/assets/lib/angular-ui-router.js"></script>
+
+        <script src='/assets/js/tutorialModule.js'></script>
+        <script src="/assets/js/tutorialDirective.js"></script>
+        <script src="/assets/js/tutorialController.js"></script>
     </head>
     <body>
-        <div data-ng-controller="ctrl1">              
-            <ul ng-repeat='aList in arrList'>
-                {{aList}}
-            </ul>
-
-            <li ng-repeat='aStudent in students'>
-                {{aStudent.name}} , {{aStudent.project}} 
-            </li>
-
-            <table>
-                <tbody>
-                    <tr ng-repeat-start = 'aStudent in students'>
-                        <td>Name: {{aStudent.name}}</td>
-                    </tr>
-                    <tr>
-                        <td>Project: {{aStudent.project}}</td>
-                    </tr>
-                    <tr ng-repeat-end>
-                        <td>
-                            Role: {{aStudent.role}}
-                        </td>
-                        <td>
-                            Experience: {{aStudent.experience}}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <b ng-show='header'>Hai</b>
-        </div>
-
-        <!-- START : Own Directory -->
-        <div class=''>
-            <b>-------Data from '$scope' and used commonly for below 3 directives------</b>
-            <student-list-directive1></student-list-directive1>
-            <div student-list-directive2></div>
-            <div class="student-list-directive3"></div>
-            </br>
-            </br>
-            <b>-------Data from its own directive---------------------------------------</b>
-            <div class="student-list-directive4"></div>
-            </br>
-            </br>
-            <b>-------Data from 'Factory' and used commonly for below 2 directives------</b>
-            <div class="student-list-directive5"></div>
-            <div class="student-list-directive6"></div>
-            </br>
-            </br>
-            <b>-------Simple dummy directive.............................................</b>
-            <!-- directive: student-list-directive7 -->
-        </div>
-        <!-- END : Own Directory -->
+        <section ui-view></section>
     </body>
 </html>

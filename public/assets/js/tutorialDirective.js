@@ -4,7 +4,7 @@
  *      - Directive identifier = 'ELEMENT' directive
  *      - working with 'SCOPE' variable (scope is commonly shared)    
  */
-app1.directive('studentListDirective1', function(){
+tutorialModule.directive('studentListDirective1', function(){
     var myLink = function ($scope, element, attrs) {
               function init(){
                   $scope.studentNames = ['Lalith', 'Ravi'];
@@ -40,7 +40,7 @@ app1.directive('studentListDirective1', function(){
  *      - Directive identifier = 'ATTRIBUTE' directive
  *      - working with 'SCOPE' variable (scope is commonly shared)    
  */
-app1.directive('studentListDirective2', function(){
+tutorialModule.directive('studentListDirective2', function(){
      var myController = ['$scope', function ($scope) {
           function init(){
                   $scope.studentNames = ['Jayachandran', 'Saravanan'];
@@ -76,7 +76,7 @@ app1.directive('studentListDirective2', function(){
  *      - Directive identifier = 'CLASS' directive
  *      - working with 'SCOPE' variable (scope is commonly shared)    
  */
-app1.directive('studentListDirective3', function(){
+tutorialModule.directive('studentListDirective3', function(){
     var aController = function ($scope) {
           function init(){
                   $scope.studentNames = ['Sendhil', 'Gowndamani'];
@@ -114,7 +114,7 @@ app1.directive('studentListDirective3', function(){
  *      - working with its own variable   
  *      - 
  */
-app1.directive('studentListDirective4', function(){
+tutorialModule.directive('studentListDirective4', function(){
     var aController = function ($scope) {
             var $this = this; 
             function init(){
@@ -153,7 +153,7 @@ app1.directive('studentListDirective4', function(){
  *      - Directive identifier = 'CLASS' directive
  *      - working with a 'FACTORY' from outside    
  */
-app1.directive('studentListDirective5', function(){
+tutorialModule.directive('studentListDirective5', function(){
     var aController = function ($scope, studentDataFac) {
             function init(){
                   bindEvents();
@@ -190,7 +190,7 @@ app1.directive('studentListDirective5', function(){
  *      - Directive identifier = 'CLASS' directive
  *      - working with a 'FACTORY' from outside    
  */
-app1.directive('studentListDirective6', function(){
+tutorialModule.directive('studentListDirective6', function(){
     var aController = function ($scope, studentDataFac) {
             function init(){
                   bindEvents();
@@ -227,7 +227,7 @@ app1.directive('studentListDirective6', function(){
  *      - 'DIRECTIVE'
  *      - Directive identifier = 'COMMENTS' directive
  */
-app1.directive('studentListDirective7', function(){
+tutorialModule.directive('studentListDirective7', function(){
     return {
         restrict : "M",
         replace : true,
