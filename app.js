@@ -10,7 +10,7 @@ var logger = require('morgan');
 var io = require('socket.io').listen(app.listen(port));
 
 var db = require('./database/main'); //sql db
-var mdb = require('./database/mongo-main'); //mongo db
+var mdb = require('./database/mongo-mongoose'); //mongo db
 
 
 app.set('view engine', 'ejs');
